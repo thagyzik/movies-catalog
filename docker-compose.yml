@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13.7
+    container_name: movies-db
+    restart: always
+    environment:
+      POSTGRES_DB: movies_catalog
+      POSTGRES_USER: puser
+      POSTGRES_PASSWORD: pgpassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/data/postgres
+
+volumes:
+  postgres_data:
