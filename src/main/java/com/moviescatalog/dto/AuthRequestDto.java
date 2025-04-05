@@ -8,7 +8,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class AuthRequestDto {
 
     @Schema(description = "Email", example = "admin@gmail.com")
